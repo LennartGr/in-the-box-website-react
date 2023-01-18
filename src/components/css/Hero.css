@@ -1,0 +1,19 @@
+#hero {
+    height: 170px;
+    background-color: var(--champagne-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+#title {
+    margin: 0;
+    font-size: 60px;
+    text-shadow: 0 0 var(--isabelline);
+}

@@ -1,0 +1,30 @@
+#navbar {
+    box-shadow: 0 2px 3px var(--beaver);
+}
+
+#navbar--list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--isabelline);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar--item {
+    margin: 5px 5px;
+    background-color: var(--dark-liver-horses);
+    text-align: center;
+    padding: 8px 32px;
+       
+}
+
+.navbar--item:hover {
+    background-color: var(--deep-taupe)
+}
+
+.navbar--item a {
+    color: var(--isabelline);
+    text-decoration: none;
+}

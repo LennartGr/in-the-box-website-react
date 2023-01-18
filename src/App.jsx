@@ -1,8 +1,14 @@
 import './App.css'
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
 
 export default function App() {
   return (
-    <h1>Hello from App</h1>
+    <div id="app">
+      <Hero />
+      <Navbar />
+    </div>
+    
   )
 }
 

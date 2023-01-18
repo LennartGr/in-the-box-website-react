@@ -1,0 +1,21 @@
+:root {
+  /* url to color palette: https://coolors.co/36241c-422c22-4d3328-644234-815f51-aa8b7e-d3b6ab-e6d5ce-f0e5e1-f9f5f3 */
+ --bistre: #36241cff;
+  --bistre-2: #422c22ff;
+  --dark-liver-horses: #4d3328ff;
+  --van-dyke-brown: #644234ff;
+  --deep-taupe: #815f51ff;
+  --beaver: #aa8b7eff;
+  --silver-pink: #d3b6abff;
+  --champagne-pink: #e6d5ceff;
+  --seashell: #f0e5e1ff;
+  --isabelline: #f9f5f3ff; 
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  background-color: var(--seashell);
+  color: var(--bistre);
+  font-family: 'Inter', sans-serif;
+}
