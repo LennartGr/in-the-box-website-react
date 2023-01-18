@@ -9,7 +9,6 @@ export default function App() {
   return (
     <LanguageProvider>  
       <div id="app">
-        <LanguageSelector />
         <Hero />
         <Navbar />
       </div>
