@@ -17,7 +17,7 @@
     background-color: var(--dark-liver-horses);
     text-align: center;
     padding: 8px 32px;
-       
+    cursor: pointer;
 }
 
 .navbar--item:hover {
