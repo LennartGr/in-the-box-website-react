@@ -9,19 +9,18 @@ import Navbar from "./Navbar"
 
 export default function MainContent() {
 
-    //the active information is currently not used
     const initialTabs = [
         {
             id: 0,
             component: <Home />,
             title: <Text tid="home" />,
-            active: false
+            active: true
         },
         {
             id: 1,
             component: <News />,
             title: <Text tid="news" />,
-            active: true
+            active: false
         },
         {
             id: 2,
@@ -36,52 +35,27 @@ export default function MainContent() {
             active: false
         }
     ]
-    
-    const [activeId, setActiveId] = useState(0)
-
-    function changeActiveId(id) {
-        setActiveId(id)
-    }
-
-    function testLog(text) {
-        //const text = "new"
-        console.log(text)
-    }
-
-    function getActiveTab() {
-        for (let i = 0; i < initialTabs.length; i++) {
-            if (initialTabs[i].id === activeId) {
-                return initialTabs[i]
-            }
-        }
-    }
-
-    //DEPRECATED 
-    //Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop.
-    
     const [tabs, setTabs] = useState(initialTabs)
 
-    
-    function getActiveTabDeprecated() {
+    function getActiveTab() {
         for (let i = 0; i < tabs.length; i++) {
             if (tabs[i].active) {
                 return tabs[i]
             } 
         }
-    }
-
+        //in case no active tab was found, for debugging
+        return {component: <p>No active tab</p>}
+    } 
 
     //set the active tab to the one with this id
-    function setActiveTabDeprecated(id) {   
-        setTabs( prevTabs => ({...prevTabs}))
+    function setActiveTab(id) {   
+        setTabs( prevTabs => prevTabs.map(tab => ({...tab, active: tab.id === id})))
     }
-    
-
     
     return (
         <div id="mainContent">
             <Navbar />
-            <button onClick={() => setActiveTabDeprecated(2)}>Test</button>
+            <button onClick={() => setActiveTab(getActiveTab().id + 1)}>Next tab</button>
             {getActiveTab().component}
         </div>
     )
