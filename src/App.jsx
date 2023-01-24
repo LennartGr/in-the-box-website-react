@@ -1,6 +1,6 @@
 import './App.css'
 import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+import MainContent from './components/MainContent'
 
 import { LanguageProvider } from './containers/Language';
 import LanguageSelector from './components/LanguageSelector';
@@ -10,7 +10,7 @@ export default function App() {
     <LanguageProvider>  
       <div id="app">
         <Hero />
-        <Navbar />
+        <MainContent />
       </div>
     </LanguageProvider>
   )
