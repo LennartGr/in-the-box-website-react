@@ -54,8 +54,7 @@ export default function MainContent() {
     
     return (
         <div id="mainContent">
-            <Navbar />
-            <button onClick={() => setActiveTab(getActiveTab().id + 1)}>Next tab</button>
+            <Navbar key={0} tabs={tabs} communicateActiveTab={setActiveTab} />
             {getActiveTab().component}
         </div>
     )

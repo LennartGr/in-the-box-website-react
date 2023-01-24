@@ -14,6 +14,7 @@
 
 .navbar--item {
     margin: 5px 5px;
+    color: var(--isabelline);
     background-color: var(--dark-liver-horses);
     text-align: center;
     padding: 8px 32px;
@@ -24,7 +25,8 @@
     background-color: var(--deep-taupe)
 }
 
-.navbar--item a {
-    color: var(--isabelline);
-    text-decoration: none;
+.navbar--item--active {
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
