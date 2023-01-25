@@ -1,5 +1,5 @@
 #navbar {
-    box-shadow: 0 2px 3px var(--beaver);
+    box-shadow: 0 2px 3px var(--dark-vintage-white);
 }
 
 #navbar--list {
@@ -7,22 +7,23 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--isabelline);
+    background-color: var(--vintage-white);
     display: flex;
     justify-content: center;
 }
 
 .navbar--item {
     margin: 5px 5px;
-    color: var(--isabelline);
-    background-color: var(--dark-liver-horses);
+    color: var(--vintage-white);
+    background-color: var(--dark-blue);
     text-align: center;
     padding: 8px 32px;
     cursor: pointer;
 }
 
 .navbar--item:hover {
-    background-color: var(--deep-taupe)
+    background-color: var(--teal);
+    box-shadow: 0 0 10px var(--light-teal);
 }
 
 .navbar--item--active {

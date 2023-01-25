@@ -3,11 +3,13 @@
     min-width: 70px;
     max-width: 170px;
     border: 1px solid var(--select-border);
+    box-shadow: 2px 2px 2px 1px var(--dark-vintage-white);
     border-radius: 0.25em;
     padding: 0.25em 0.5em;
     font-size: 1.25rem;
     cursor: pointer;
     line-height: 1.1;
-    background-color: #fff;
-    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    background-color: var(--vintage-white);
+    /* background-image: linear-gradient(to top, var(--very-light-teal), var(--light-yellow) 50%); */
+    color: var(--dark-blue);
 }

@@ -1,6 +1,6 @@
 #hero {
     height: 170px;
-    background-color: var(--champagne-pink);
+    background-color: var(--very-light-green);
     display: flex;
     align-items: center;
 }
@@ -11,15 +11,15 @@
 }
 
 #logo {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    margin-right: 35px;
 }
 
 #title {
     margin: 0;
     font-size: 60px;
-    text-shadow: 0 0 var(--isabelline);
+    /* text-shadow: 1px 2px var(--teal); */
 }
 
 .parent {
