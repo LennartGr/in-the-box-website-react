@@ -1,5 +1,5 @@
 import './css/Hero.css'
-import logo from '../../public/logo.svg'
+import logo from '../images/logo.svg'
 import LanguageSelector from './LanguageSelector'
 
 export default function Hero() {
