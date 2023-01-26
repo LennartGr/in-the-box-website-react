@@ -17,6 +17,11 @@
   --dark-vintage-white: #B9B08B;
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   text-align: center;
