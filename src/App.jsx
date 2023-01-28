@@ -9,7 +9,6 @@ export default function App() {
   return (
     <LanguageProvider>  
       <div id="app">
-        <Hero />
         <MainContent />
       </div>
     </LanguageProvider>

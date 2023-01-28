@@ -1,3 +1,5 @@
+import "./css/MainContent.css"
+
 import { useState, useEffect } from 'react'
 import { Text, LanguageContext } from '../containers/Language';
 
@@ -6,6 +8,9 @@ import News from "./News"
 import Contact from "./Contact"
 import About from "./About"
 import Navbar from "./Navbar"
+
+import Hero from "./Hero"
+import LanguageSelector from "./LanguageSelector";
 
 export default function MainContent() {
 
@@ -54,8 +59,14 @@ export default function MainContent() {
     
     return (
         <div id="mainContent">
-            <Navbar key={0} tabs={tabs} communicateActiveTab={setActiveTab} />
-            {getActiveTab().component}
+            <div id="header">
+                <Hero />
+                <Navbar key={0} tabs={tabs} communicateActiveTab={setActiveTab} />
+                <LanguageSelector />
+            </div>
+            <div id="content">
+                {getActiveTab().component}
+            </div>
         </div>
     )
 }

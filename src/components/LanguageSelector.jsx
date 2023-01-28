@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './css/LanguageSelector.css'
+import './css/Navbar.css'
 
 import flags from "../images/flags/flags"
 
@@ -37,7 +38,7 @@ export default function LanguageSelector() {
   ))
 
   return (
-    <div className="select-box">
+    <div id="select-box" className="navbar--item">
       {/*conditionally add active to className of options-container*/}
       <div className={`options-container${optionsShown ? " active" : ""}`}>
         {options}

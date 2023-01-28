@@ -14,7 +14,9 @@ export default function Navbar(props) {
         return <li key={currentKey++}
             className={currentClassName}
             onClick={() => props.communicateActiveTab(tab.id)}>
-            {tab.title}
+            <div className="navbar--item--text"> 
+                {tab.title}
+            </div>        
         </li>
     }
 

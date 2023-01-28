@@ -1,6 +1,4 @@
 #hero {
-    height: 170px;
-    background-color: var(--very-light-green);
     display: flex;
     align-items: center;
 }
@@ -11,27 +9,14 @@
 }
 
 #logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-right: 35px;
 }
 
 #title {
     margin: 0;
-    font-size: 60px;
+    font-size: 50px;
     /* text-shadow: 1px 2px var(--teal); */
 }
 
-.parent {
-    display: flex;
-}
-
-.left, .right {
-    flex: 1;
-}
-
-.left, .right {
-    text-align: left;
-    /*have language selector not directly at left edge */
-    padding: 15px;
-}

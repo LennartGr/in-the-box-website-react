@@ -1,5 +1,6 @@
 #navbar {
-    box-shadow: 0 2px 3px var(--dark-vintage-white);
+    /* box-shadow: 0 2px 3px var(--dark-vintage-white); */
+    margin-left: 40px;
 }
 
 #navbar--list {
@@ -7,19 +8,27 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--vintage-white);
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .navbar--item {
-    margin: 5px 5px;
-    color: var(--vintage-white);
     background-color: var(--dark-blue);
     text-align: center;
     padding: 8px 32px;
     cursor: pointer;
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
+.navbar--item--text {
+    color: var(--vintage-white);
+    text-decoration: inherit;
+}
+
 
 .navbar--item:hover {
     background-color: var(--teal);
