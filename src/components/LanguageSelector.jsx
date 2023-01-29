@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import './css/LanguageSelector.css'
-import './css/Navbar.css'
 
 import flags from "../images/flags/flags"
 
@@ -39,14 +38,15 @@ export default function LanguageSelector() {
 
   return (
     <div id="select-box" className="navbar--item">
-      {/*conditionally add active to className of options-container*/}
+      {/*conditionally add active to className of options-container
+      Leave order of the two divs like this to enable toggling arrow direction*/}
+      <div className={`options-container${optionsShown ? " active" : ""}`}>
+        {options}
+      </div>  
       <div className="selected" onClick={toggleShowOptions}>
         <img className="flag" src={flags[userLanguage]} />
         {getCurrentLanguage()}
-      </div>
-      <div className={`options-container${optionsShown ? " active" : ""}`}>
-        {options}
-      </div>   
+      </div>  
     </div>
   )
 };
