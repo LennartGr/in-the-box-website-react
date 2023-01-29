@@ -10,7 +10,6 @@ import About from "./About"
 import Navbar from "./Navbar"
 
 import Hero from "./Hero"
-import LanguageSelector from "./LanguageSelector";
 
 export default function MainContent() {
 
@@ -62,7 +61,6 @@ export default function MainContent() {
             <div id="header">
                 <Hero />
                 <Navbar key={0} tabs={tabs} communicateActiveTab={setActiveTab} />
-                <LanguageSelector />
             </div>
             <div id="content">
                 {getActiveTab().component}

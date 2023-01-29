@@ -1,3 +1,7 @@
+:root {
+    --navbar--item--padding--sides: 32px;
+}
+
 #navbar {
     /* box-shadow: 0 2px 3px var(--dark-vintage-white); */
     margin-left: 40px;
@@ -7,7 +11,6 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     height: 100%;
@@ -16,9 +19,9 @@
 .navbar--item {
     background-color: var(--dark-blue);
     text-align: center;
-    padding: 8px 32px;
+    padding: 8px var(--navbar--item--padding--sides);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -30,9 +33,8 @@
 }
 
 
-.navbar--item:hover {
+.navbar--item:hover, .navbar--item:hover > * {
     background-color: var(--teal);
-    box-shadow: 0 0 10px var(--light-teal);
 }
 
 .navbar--item--active {

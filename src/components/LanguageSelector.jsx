@@ -40,13 +40,13 @@ export default function LanguageSelector() {
   return (
     <div id="select-box" className="navbar--item">
       {/*conditionally add active to className of options-container*/}
-      <div className={`options-container${optionsShown ? " active" : ""}`}>
-        {options}
-      </div>
       <div className="selected" onClick={toggleShowOptions}>
         <img className="flag" src={flags[userLanguage]} />
         {getCurrentLanguage()}
       </div>
+      <div className={`options-container${optionsShown ? " active" : ""}`}>
+        {options}
+      </div>   
     </div>
   )
 };

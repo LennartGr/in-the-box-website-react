@@ -1,46 +1,40 @@
+:root {
+    --languageSelector--width: 210px;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
 #select-box {
-    
-    width: 250px;
-
-    height: inherit;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     padding: 0 0;
     cursor: pointer;
-    font-size: 20px;
-    border: 2px solid yellow
 }
 
 /* attention */
 #select-box .options-container {
     background: #2f3640;
-    color: #f5f6fa;
     max-height: 0;
-    width: 100%;
+    /* width shall exactly match the one of the navbar item */
+    width: calc(var(--languageSelector--width) + 2 * var(--navbar--item--padding--sides));
     opacity: 0;
     transition: all 0.4s;
     border-radius: 8px;
     overflow: hidden;
-
-    order: 1;
+    /* use absolute positioning to not disturb flexbox */
+    position: absolute;
+    /* offset: header-height plus little gap */
+    top: var(--header--hight)
 }
 
 .selected {
-    background: #2f3640;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    color: #f5f6fa;
+    width: var(--languageSelector--width);
     position: relative;
-
-    order: 0;
-    border: 2px solid wheat
 }
 
 .selected::after {
@@ -53,25 +47,29 @@
     height: 100%;
     width: 32px;
     right: 10px;
-    top: 5px;
+    top: 12px;
 
     transition: all 0.4s;
 }
 
+#select-box .options-container.active+.selected::after {
+    /* TODO debug */
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
 .flag {
-    width: 25px;
+    height: 25px;
+    /* common ratio for flags is 2:3 */
+    width: calc(25px / 2 * 3);
     margin-right: 10px;
 }
 
 #select-box .options-container.active {
+    /* max-height only needed in case of lots of content */
     max-height: 240px;
     opacity: 1;
     overflow-y: scroll;
-}
-
-#select-box .options-container.active+.selected::after {
-    transform: rotateX(180deg);
-    top: -6px;
 }
 
 #select-box .options-container::-webkit-scrollbar {
