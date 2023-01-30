@@ -1,5 +1,7 @@
 :root {
     --header-hight: 90px;
+    --small-screen-size: 500px;
+    --header-hight-small-screen: 280px;
 }
 
 #header {
@@ -10,4 +12,13 @@
     color: var(--vintage-white);
     height: var(--header-hight);
     margin-bottom: 20px;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+    #header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

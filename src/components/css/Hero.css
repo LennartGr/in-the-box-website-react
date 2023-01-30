@@ -35,3 +35,31 @@
     font-size: 50px;
     /* text-shadow: 1px 2px var(--teal); */
 }
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+
+    #hero {
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+
+    #hero--logotitle {
+        flex-direction: column;
+    }
+
+    #logo-background-blur {
+        width: 44px;
+        height: 44px;
+        margin-right: 20px;
+    }
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    #title {
+        font-size: 30px;
+    }
+}

@@ -23,7 +23,7 @@ export default function Navbar(props) {
     //add language selector as special list item
     listItems.push(
         <li key={currentKey++}>         
-            <div className="navbar--item navbar--item--text">
+            <div id="navbar--LanguageSelector" className="navbar--item navbar--item--text">
                 <LanguageSelector />
             </div>
         </li>)

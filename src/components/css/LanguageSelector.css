@@ -31,18 +31,18 @@
     overflow: hidden;
     /* use absolute positioning to not disturb flexbox */
     position: absolute;
-    /* offset: header-height plus little gap */
-    top: var(--header-hight)
+    /* offset: list item height */
+    top: 100%;
 }
 
 .selected {
     width: var(--languageSelector-width);
     position: relative;
-    padding: 12px 0px;
     /* center flag with text */
     display: flex;
 }
 
+/* arrow symbol */
 .selected::after {
     content: "";
     background: url("../../images/arrow-down.svg");
@@ -53,7 +53,7 @@
     height: 100%;
     width: 32px;
     right: 10px;
-    top: 12px;
+    top: 0px;
 
     transition: all 0.4s;
 }
@@ -61,7 +61,7 @@
 #select-box .options-container.active + .selected::after {
     /* TODO debug */
     transform: rotateX(180deg);
-    top: -11px;
+    top: 0px;
 }
 
 .flag {
@@ -101,4 +101,11 @@
 
 #select-box .option .radio {
     display: none;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+    .selected::after {
+        left: 65%
+    }
 }
