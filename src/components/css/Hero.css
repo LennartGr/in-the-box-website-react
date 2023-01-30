@@ -8,10 +8,26 @@
     align-items: center;
 }
 
+#header-images {
+    position: relative;
+}
+
+#logo-background-blur {
+    width: 84px;
+    height: 84px;
+    /* mono-color the image with var(--vintage-white) using this calculator:
+    https://codepen.io/sosuke/pen/Pjoqqp 
+    blur at the end */
+    filter: brightness(0) saturate(100%) invert(96%) sepia(5%) saturate(1872%) hue-rotate(313deg) brightness(108%) contrast(102%) blur(1px);
+    margin-right: 35px;
+}
+
 #logo {
     width: 80px;
     height: 80px;
-    margin-right: 35px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
 }
 
 #title {
@@ -19,4 +35,3 @@
     font-size: 50px;
     /* text-shadow: 1px 2px var(--teal); */
 }
-

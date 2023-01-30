@@ -4,17 +4,16 @@
   /* url to color palette, names are changed: https://coolors.co/a4e473-c8f0a8-e9f9dc-002529-004752-00a181-adffef-d6fff7-f2ef12-faf89e */
   --green: #a4e473ff;
   --light-gren: #c8f0a8ff;
-  --very-light-green: #e9f9dcff;
-  --ultra-light-green: #F4FCEE;
+  --very-light-green: #F4FCEE;
   --dark-blue: #00373D;
   --blue: #004752ff;
   --teal: #00a181ff;
   --light-teal: #adffefff;
-  --very-light-teal: #d6fff7ff;
   --yellow: #f2ef12ff;
   --light-yellow: #faf89eff;
+  --very-dark-vintage-white: #7E764E;
+  --dark-vintage-white: #D8D4C0;
   --vintage-white: #fffcec;
-  --dark-vintage-white: #B9B08B;
 }
 
 * {
@@ -25,7 +24,7 @@
 body {
   margin: 0;
   text-align: center;
-  background-color: var(--ultra-light-green);
+  background-color: var(--very-light-green);
   color: var(--dark-blue);
   font-family: 'Inter', sans-serif;
 }

@@ -1,12 +1,13 @@
 :root {
-    --header--hight: 90px;
+    --header-hight: 90px;
 }
 
 #header {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    background-color: red;
-    height: var(--header--hight);
+    background-color: var(--dark-blue);
+    color: var(--vintage-white);
+    height: var(--header-hight);
     margin-bottom: 20px;
 }

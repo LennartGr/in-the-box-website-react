@@ -1,5 +1,5 @@
 :root {
-    --languageSelector--width: 195px;
+    --languageSelector-width: 195px;
 }
 
 * {
@@ -18,10 +18,13 @@
 
 /* attention */
 #select-box .options-container {
-    background: #2f3640;
+    background: var(--vintage-white);
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    box-shadow: 0 2px 4px var(--very-dark-vintage-white);
     max-height: 0;
     /* width shall exactly match the one of the navbar item */
-    width: calc(var(--languageSelector--width) + 2 * var(--navbar--item--padding--sides));
+    width: calc(var(--languageSelector-width) + 2 * var(--navbar-item-padding-sides));
     opacity: 0;
     transition: all 0.4s;
     border-radius: 8px;
@@ -29,11 +32,11 @@
     /* use absolute positioning to not disturb flexbox */
     position: absolute;
     /* offset: header-height plus little gap */
-    top: var(--header--hight)
+    top: var(--header-hight)
 }
 
 .selected {
-    width: var(--languageSelector--width);
+    width: var(--languageSelector-width);
     position: relative;
     padding: 12px 0px;
     /* center flag with text */
@@ -93,7 +96,7 @@
 }
 
 #select-box .option:hover {
-    background: #414b57;
+    background: var(--dark-vintage-white);
 }
 
 #select-box .option .radio {

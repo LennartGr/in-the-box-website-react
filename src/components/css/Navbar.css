@@ -1,5 +1,5 @@
 :root {
-    --navbar--item--padding--sides: 32px;
+    --navbar-item-padding-sides: 32px;
 }
 
 #navbar {
@@ -17,9 +17,8 @@
 }
 
 .navbar--item {
-    background-color: var(--dark-blue);
     text-align: center;
-    padding: 8px var(--navbar--item--padding--sides);
+    padding: 8px var(--navbar-item-padding-sides);
     cursor: pointer;
     font-size: 25px;
     height: 100%;
