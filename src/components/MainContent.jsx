@@ -18,7 +18,7 @@ export default function MainContent() {
             id: 0,
             component: <Home />,
             title: <Text tid="home" />,
-            active: true
+            active: false
         },
         {
             id: 1,
@@ -39,8 +39,21 @@ export default function MainContent() {
             active: false
         }
     ]
-    const [tabs, setTabs] = useState(initialTabs)
+    const [tabs, setTabs] = useState(() => {
+        // fetch the active tab id from local storage and set it to new state
+        // if no active tab, take the one with id === 0 as the active one (always home)
+        // note: Not possible to keep whole tabs object on local storage
+        const activeTabId = (JSON.parse(localStorage.getItem("activeTabID")) || 0)
+        return initialTabs.map(tab => ({...tab, active: tab.id === activeTabId}))
+    })
 
+    // keep local storage up to date which tap is active
+    useEffect(() => {
+        const activeTabID = getActiveTab().id
+        localStorage.setItem("activeTabID", JSON.stringify(activeTabID))    
+    }, [tabs] )
+
+    // return the active tab as an object
     function getActiveTab() {
         for (let i = 0; i < tabs.length; i++) {
             if (tabs[i].active) {
