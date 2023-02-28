@@ -17,11 +17,6 @@ export default function LanguageSelector() {
     return languageOptions[userLanguage]
   }
 
-  //retrieves the dropdown-menu / shows it
-  function toggleShowOptions() {
-    setOptionsShown(val => !val)
-  }
-
   //create one option for each language
   const options = Object.entries(languageOptions).map(([id, name]) => (
     <div
@@ -29,24 +24,29 @@ export default function LanguageSelector() {
       className="option"
       onClick={function () {
         userLanguageChange(id)
-        toggleShowOptions()
+        setOptionsShown(false)
       }}>
       <img className="flag" src={flags[id]} />
-      {name}   
+      {name}
     </div>
   ))
 
+  //integrate language selector into the navbar by adding following classNames to the outer div
   return (
-    <div id="select-box" className="navbar--item">
-      {/*conditionally add active to className of options-container
+    <div id="navbar--LanguageSelector" className="navbar--item navbar--item--text" 
+    onMouseEnter={() => setOptionsShown(true)}
+    onMouseLeave={() => setOptionsShown(false)}>
+      <div id="select-box" className="navbar--item">
+        {/*conditionally add active to className of options-container
       Leave order of the two divs like this to enable toggling arrow direction*/}
-      <div className={`options-container${optionsShown ? " active" : ""}`}>
-        {options}
-      </div>  
-      <div className="selected" onClick={toggleShowOptions}>
-        <img className="flag" src={flags[userLanguage]} />
-        {getCurrentLanguage()}
-      </div>  
+        <div className={`options-container${optionsShown ? " active" : ""}`}>
+          {options}
+        </div>
+        <div className="selected">
+          <img className="flag" src={flags[userLanguage]} />
+          {getCurrentLanguage()}
+        </div>
+      </div>
     </div>
   )
 };

@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+#navbar--LanguageSelector {
+    /* necessary to position dropdown menu absolutely */
+    position: relative;
+}
+
 #select-box {
     display: flex;
     flex-direction: column;
