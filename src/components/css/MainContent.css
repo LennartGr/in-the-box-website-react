@@ -18,6 +18,10 @@
     margin-bottom: 10px;
 }
 
+.section p {
+    font-size: 20px;
+}
+
 /* MOBILE */
 @media only screen and (max-width: 600px) {
     #header {
