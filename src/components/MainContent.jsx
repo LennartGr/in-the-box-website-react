@@ -8,35 +8,49 @@ import News from "./News"
 import Contact from "./Contact"
 import About from "./About"
 import Navbar from "./Navbar"
+import NotFound from "./NotFound"
 
 import Hero from "./Hero"
 
 export default function MainContent() {
 
+    // title is communicated to the navbar
+    // one can define whether a route is relevant for the navbar (NotFound route is not)
     const routesInformation = [
         {
             id: 0,
             element: <Home />,
             path: "/",
             title: <Text tid="home" />,
+            navbarRelevant: true
         },
         {
             id: 1,
             element: <News />,
             path: "/news",
             title: <Text tid="news" />,
+            navbarRelevant: true
         },
         {
             id: 2,
             element: <Contact />,
             path: "/contact",
             title: <Text tid="contact" />,
+            navbarRelevant: true
         },
         {
             id: 3,
             element: <About />,
             path: "/about",
             title: <Text tid="about" />,
+            navbarRelevant: true
+        },
+        {
+            id: 4,
+            element: <NotFound />,
+            path: "/*",
+            title: "",
+            navbarRelevant: false
         }
     ]
 
@@ -48,7 +62,7 @@ export default function MainContent() {
         <div id="mainContent">
             <div id="header">
                 <Hero />
-                <Navbar key={0} routesInformation={routesInformation} />
+                <Navbar key={0} routesInformation={routesInformation.filter(route => route.navbarRelevant)} />
             </div>
             <div id="content">
                 <Routes>
