@@ -8,10 +8,6 @@ export default function Navbar(props) {
     let listItems = props.routesInformation.map(route => {
         // conditional style active tap by adding extra className
         let currentClassName = "navbar--item"
-        // TODO
-        if (false) {
-            currentClassName += " navbar--item--active"
-        }
         // build list item
         return (<li key={currentKey++} >
             <NavLink to={route.path} className={currentClassName}>
