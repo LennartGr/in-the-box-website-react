@@ -1,24 +1,25 @@
 import "./css/Navbar.css"
+import { NavLink } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
-import { Text, LanguageContext } from '../containers/Language';
 
 export default function Navbar(props) {
     //to avoid warnings
     let currentKey = 0
-    let listItems = props.tabs.map(tab => {
+    let listItems = props.routesInformation.map(route => {
         // conditional style active tap by adding extra className
         let currentClassName = "navbar--item"
-        if (tab.active) {
+        // TODO
+        if (false) {
             currentClassName += " navbar--item--active"
         }
         // build list item
-        return <li key={currentKey++}
-            className={currentClassName}
-            onClick={() => props.communicateActiveTab(tab.id)}>
-            <div className="navbar--item--text">
-                {tab.title}
-            </div>
-        </li>
+        return (<li key={currentKey++} >
+            <NavLink to={route.path} className={currentClassName}>
+                <div className="navbar--item--text">
+                    {route.title}
+                </div>
+            </NavLink>        
+        </li>)
     })
     //add language selector as special list item
     listItems.push(

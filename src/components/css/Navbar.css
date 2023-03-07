@@ -17,6 +17,7 @@
 }
 
 .navbar--item {
+    text-decoration: none;
     text-align: center;
     padding: 8px var(--navbar-item-padding-sides);
     cursor: pointer;
@@ -36,7 +37,7 @@
     background-color: var(--teal);
 }
 
-.navbar--item--active {
+.navbar--item.active {
     font-weight: 900;
     text-decoration: underline;
     text-underline-offset: 4px;
